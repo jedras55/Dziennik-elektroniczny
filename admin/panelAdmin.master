@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="panelAdmin.master.cs" Inherits="admin_panelAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Panel administratora</a>
+                </div>
+                 <ul class="nav navbar-nav">
+                    <li><a href="adminAdministratorzy.aspx"><span class="glyphicon glyphicon-list-alt"></span> Administratorzy</a></li>
+                    <li><a href="adminNauczyciele.aspx"><span class="glyphicon glyphicon-list-alt"></span> Nauczyciele</a></li>
+                    <li><a href="adminKlasy.aspx"><span class="glyphicon glyphicon-list-alt"></span> Klasy</a></li> 
+                     <li><a href="adminRodzice.aspx"><span class="glyphicon glyphicon-list-alt"></span> Rodzice</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> <asp:Label ID="LabelLogin" runat="server" Text="Label"></asp:Label></a></li> 
+                    <li><asp:LinkButton ID="ButtonLogout" runat="server" OnClick="ButtonLogout_Click"> <span class="glyphicon glyphicon-log-out"></span> Wyloguj</asp:LinkButton></li>
+                </ul>
+            </div>
+        </nav>
+     </div>
+    <asp:ContentPlaceHolder ID="contentBody" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
